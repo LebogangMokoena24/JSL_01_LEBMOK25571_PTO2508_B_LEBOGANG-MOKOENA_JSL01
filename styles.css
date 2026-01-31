@@ -1,4 +1,4 @@
-/* ===== CSS VARIABLES ===== */
+/* ===== VARIABLES ===== */
 :root {
   --purple: #635FC7;
   --light-grey: #F4F7FD;
@@ -13,14 +13,11 @@
   padding: 0;
 }
 
-/* ===== BODY ===== */
+/* ===== BODY & LAYOUT ===== */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--light-grey);
   min-height: 100vh;
-}
-/* ===== LAYOUT ===== */
-body {
   display: flex;
 }
 
@@ -28,116 +25,37 @@ body {
 nav {
   width: 260px;
   background-color: var(--white);
-  padding: 24px;
+  padding: 32px 24px;
   border-right: 1px solid #E4EBFA;
 }
 
-/* ===== MAIN CONTENT WRAPPER ===== */
-body > div {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-/* ===== HEADER ===== */
-header {
-  background-color: var(--white);
-  padding: 24px 32px;
-  border-bottom: 1px solid #E4EBFA;
-}
-
-header h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #000112;
-}
-/* ===== KANBAN LAYOUT ===== */
-main {
-  display: flex;
-  gap: 24px;
-  padding: 32px;
-  overflow-x: auto;
-}
-
-/* Each column */
-main > div {
-  min-width: 280px;
-}
-/* ===== COLUMN HEADERS ===== */
-main > div > div:first-child {
+/* ===== KANBAN WORDMARK ===== */
+.sidebar-top {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 
-main h4 {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: var(--dark-grey);
-  font-weight: 700;
-}
-
-/* Dot before column title */
-main span {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-/* Column colours (order matters) */
-main > div:nth-child(1) span {
-  background-color: #49C4E5;
-}
-
-main > div:nth-child(2) span {
-  background-color: #8471F2;
-}
-
-main > div:nth-child(3) span {
-  background-color: #67E2AE;
-}
-/* ===== TASK CARDS ===== */
-main > div > div:last-child {
+.kanban-mark {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  gap: 4px;
 }
 
-main > div > div:last-child > div {
-  background-color: var(--white);
-  padding: 16px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 14px;
+.kanban-mark span {
+  width: 6px;
+  height: 24px;
+  background-color: var(--purple);
+  border-radius: 2px;
+}
+
+.kanban-text {
+  font-size: 22px;
+  font-weight: 700;
   color: #000112;
-  box-shadow: 0 4px 6px rgba(54, 78, 126, 0.1);
-  cursor: pointer;
 }
-/* ===== MOBILE VIEW ===== */
-@media (max-width: 768px) {
-  nav {
-    display: none;
-  }
 
-  header {
-    padding: 16px;
-  }
-
-  main {
-    padding: 16px;
-    gap: 16px;
-  }
-}
 /* ===== SIDEBAR CONTENT ===== */
-.sidebar-top {
-  margin-bottom: 40px;
-}
-
-.logo {
-  width: 150px;
-}
-
 .sidebar-content h4 {
   font-size: 12px;
   letter-spacing: 2px;
@@ -155,5 +73,104 @@ main > div > div:last-child > div {
   font-weight: 700;
   text-align: left;
   cursor: pointer;
+}
+
+/* ===== MAIN WRAPPER ===== */
+.layout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: var(--white);
+  padding: 24px 32px;
+  border-bottom: 1px solid #E4EBFA;
+}
+
+header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000112;
+}
+
+/* ===== KANBAN BOARD ===== */
+main {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  overflow-x: auto;
+}
+
+.column {
+  min-width: 280px;
+}
+
+/* ===== COLUMN HEADERS ===== */
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.column-header h4 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--dark-grey);
+  font-weight: 700;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.todo {
+  background-color: #49C4E5;
+}
+
+.doing {
+  background-color: #8471F2;
+}
+
+.done {
+  background-color: #67E2AE;
+}
+
+/* ===== TASK CARDS ===== */
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task {
+  background-color: var(--white);
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000112;
+  box-shadow: 0 4px 6px rgba(54, 78, 126, 0.1);
+  cursor: pointer;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  header {
+    padding: 16px;
+  }
+
+  main {
+    padding: 16px;
+    gap: 16px;
+  }
 }
 
