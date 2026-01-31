@@ -97,4 +97,21 @@ main > div:nth-child(2) span {
 main > div:nth-child(3) span {
   background-color: #67E2AE;
 }
+/* ===== TASK CARDS ===== */
+main > div > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+main > div > div:last-child > div {
+  background-color: var(--white);
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000112;
+  box-shadow: 0 4px 6px rgba(54, 78, 126, 0.1);
+  cursor: pointer;
+}
 
