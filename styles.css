@@ -38,4 +38,16 @@ body > div {
   display: flex;
   flex-direction: column;
 }
+/* ===== HEADER ===== */
+header {
+  background-color: var(--white);
+  padding: 24px 32px;
+  border-bottom: 1px solid #E4EBFA;
+}
+
+header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000112;
+}
 
