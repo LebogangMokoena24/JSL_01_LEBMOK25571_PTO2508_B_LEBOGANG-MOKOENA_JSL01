@@ -62,4 +62,39 @@ main {
 main > div {
   min-width: 280px;
 }
+/* ===== COLUMN HEADERS ===== */
+main > div > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+main h4 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--dark-grey);
+  font-weight: 700;
+}
+
+/* Dot before column title */
+main span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Column colours (order matters) */
+main > div:nth-child(1) span {
+  background-color: #49C4E5;
+}
+
+main > div:nth-child(2) span {
+  background-color: #8471F2;
+}
+
+main > div:nth-child(3) span {
+  background-color: #67E2AE;
+}
 
