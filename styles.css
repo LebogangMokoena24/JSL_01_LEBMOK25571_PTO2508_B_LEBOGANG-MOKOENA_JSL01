@@ -50,4 +50,16 @@ header h2 {
   font-weight: 700;
   color: #000112;
 }
+/* ===== KANBAN LAYOUT ===== */
+main {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  overflow-x: auto;
+}
+
+/* Each column */
+main > div {
+  min-width: 280px;
+}
 
