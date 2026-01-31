@@ -1,1 +1,22 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+  --purple: #635FC7;
+  --light-grey: #F4F7FD;
+  --dark-grey: #828FA3;
+  --white: #FFFFFF;
+}
+
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--light-grey);
+  min-height: 100vh;
+}
 
