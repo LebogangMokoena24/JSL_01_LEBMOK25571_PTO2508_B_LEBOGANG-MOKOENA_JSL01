@@ -1,73 +1,76 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kanban | Launch Career</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban | Launch Career</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
   <body>
-    <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
+    <!-- SIDEBAR -->
     <nav>
-  <div class="sidebar-top">
-    <img src="logo-light.svg" alt="Kanban Logo" class="logo" />
-  </div>
-
-  <div class="sidebar-content">
-    <h4>TODO (4)</h4>
-    <button class="active-board">Launch Career</button>
-  </div>
-</nav>
-
-    <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
-    <div>
-      <header>
-        <div>
-          <h2>Launch Career</h2>
+      <div class="sidebar-top">
+        <div class="kanban-mark">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <span class="kanban-text">Kanban</span>
+      </div>
+
+      <div class="sidebar-content">
+        <h4>ALL BOARDS (1)</h4>
+        <button class="active-board">Launch Career</button>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="layout">
+      <header>
+        <h2>Launch Career</h2>
       </header>
 
-      <div>
-        <main>
-          <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
-          <div>
-            <div>
-              <span></span>
-              <h4>TODO (4)</h4>
-            </div>
-            <!-- Tasks container for TODO -->
-            <div>
-  <div>Launch Career 🚀</div>
-  <div>Conquer React ⚛️</div>
-  <div>Understand Databases ⚙️</div>
-  <div>Crush Frameworks 🖼️</div>
-</div>   
+      <main>
+        <!-- TODO COLUMN -->
+        <div class="column">
+          <div class="column-header">
+            <span class="dot todo"></span>
+            <h4>TODO (4)</h4>
           </div>
-          <!-- DOING Column -->
-          <div>
-            <div>
-              <span></span>
-              <h4>DOING (2)</h4>
-            </div>
-            <!-- Tasks container for DOING -->
-            <div>
-              <div>Master JavaScript 💛</div>
-              <div>Keep on Going 🏆</div>
-            </div>
+          <div class="tasks">
+            <div class="task">Launch Career 🚀</div>
+            <div class="task">Conquer React ⚛️</div>
+            <div class="task">Understand Databases ⚙️</div>
+            <div class="task">Crush Frameworks 🖼️</div>
           </div>
-          <!-- DONE Column -->
-          <div>
-            <div>
-              <span></span>
-              <h4>DONE (2)</h4>
-            </div>
-            <!-- Tasks container for DONE -->
-            <div>
-              <div>Contribute to Open Source Projects 🌐</div>
-              <div>Build Portfolio Projects 🛠️</div>
-            </div>
+        </div>
+
+        <!-- DOING COLUMN -->
+        <div class="column">
+          <div class="column-header">
+            <span class="dot doing"></span>
+            <h4>DOING (2)</h4>
           </div>
-        </main>
-      </div>
+          <div class="tasks">
+            <div class="task">Master JavaScript 💛</div>
+            <div class="task">Keep on Going 🏆</div>
+          </div>
+        </div>
+
+        <!-- DONE COLUMN -->
+        <div class="column">
+          <div class="column-header">
+            <span class="dot done"></span>
+            <h4>DONE (2)</h4>
+          </div>
+          <div class="tasks">
+            <div class="task">Contribute to Open Source 🌐</div>
+            <div class="task">Build Portfolio Projects 🛠️</div>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>
+
