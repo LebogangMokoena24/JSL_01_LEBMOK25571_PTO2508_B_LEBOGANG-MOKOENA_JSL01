@@ -114,4 +114,19 @@ main > div > div:last-child > div {
   box-shadow: 0 4px 6px rgba(54, 78, 126, 0.1);
   cursor: pointer;
 }
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  header {
+    padding: 16px;
+  }
+
+  main {
+    padding: 16px;
+    gap: 16px;
+  }
+}
 
