@@ -129,4 +129,31 @@ main > div > div:last-child > div {
     gap: 16px;
   }
 }
+/* ===== SIDEBAR CONTENT ===== */
+.sidebar-top {
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.sidebar-content h4 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--dark-grey);
+  margin-bottom: 16px;
+}
+
+.active-board {
+  width: 100%;
+  background-color: var(--purple);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 24px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
 
